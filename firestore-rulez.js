@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const __dirname = path.dirname(new URL(import.meta.url).pathname)
 const concat = require('concat')
 const fs = require('fs')
 
