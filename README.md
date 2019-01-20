@@ -75,17 +75,17 @@ function isAuthenticated() {
 }
 
 // Returns Current Auth User's Uid
-function currentUserUid() {
+function authUserUid() {
   return request.auth.uid
 }
 
 // Returns Current Auth User's Email
-function currentUserEmail() {
+function authUserEmail() {
   return request.auth.token.email
 }
 
 // Returns wether Current Auth User's Email is verified
-function emailVerified() {
+function authUserEmailIsVerified() {
   return request.auth.token.email_verified
 }
 
