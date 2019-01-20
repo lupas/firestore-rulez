@@ -22,7 +22,7 @@ Make sure you have Node.js installed on your system (the newer, the better).
 1. Install firestore-rulez in the folder where your firestore.rules file needs to be generated:
 
 ```bash
-npm i firestore-rulez
+npm i firestore-rulez --save-dev
 ```
 
 2. Create a subfolder called `/rules`.
