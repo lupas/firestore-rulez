@@ -1,6 +1,6 @@
 {
   "name": "firestore-rulez",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "license": "MIT",
   "description": "Combines multiple *.rules files into one single firestore.rules file.",
   "main": "firestore-rulez.js",
