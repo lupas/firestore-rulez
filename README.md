@@ -99,7 +99,7 @@ function incomingData() {
   return request.resource.data
 }
 
-// Returns the amount of write fields of a request
+// Checks if the request has X write fields
 function hasAmtOfWriteFields(size) {
   return request.writeFields.size() == size
 }
