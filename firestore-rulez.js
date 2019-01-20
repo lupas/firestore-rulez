@@ -1,7 +1,15 @@
 #!/usr/bin/env node
 const concat = require('concat')
 const fs = require('fs')
-const config = require('./rules/rulez.config.js')
+
+// Get Config
+let helpersEnabled = false
+try {
+  const config = require('./rules/rulez.config.js')
+  helpersEnabled = config.helpers
+} catch {
+  // no config available
+}
 
 // Read all files in current directory
 const rulesSrc = './rules'
@@ -13,7 +21,7 @@ fs.readdirSync(rulesSrc).forEach(file => {
 })
 
 // Add Helper Functions to 2nd position of array
-if (config.helpers) {
+if (helpersEnabled) {
   filesArray.unshift(`${__dirname}/helperFunctions/index.rules`)
 }
 
