@@ -1,0 +1,25 @@
+{
+  "name": "firestore-rulez",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Combines multiple *.rules files into one single firestore.rules file.",
+  "main": "firestore-rulez.js",
+  "scripts": {
+    "start": "node firestore-rulez"
+  },
+  "author": "Pascal Luther",
+  "repository": "https://github.com/lupas/firestore-rulez",
+  "homepage": "https://github.com/lupas",
+  "keywords": [
+    "firebase, firestore, security, rules, security rules"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "concat": "^1.0.3"
+  },
+  "bin": {
+    "firestore-rulez": "./firestore-rulez.js"
+  }
+}
