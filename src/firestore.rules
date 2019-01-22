@@ -1,0 +1,4 @@
+service cloud.firestore {
+	match /databases/{database}/documents {
+  }
+}
