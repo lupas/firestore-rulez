@@ -21,7 +21,7 @@ const compileFirestoreRules = function() {
     const config = require(`${execPath}/rules/rulez.config.js`)
     helpersEnabled = config.helpers
   } catch (e) {
-    // no config available
+    console.info(`ℹ️ No config file found.`)
   }
 
   // Read all .rules files in the ./rules directory and subdirectories
