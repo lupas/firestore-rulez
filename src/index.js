@@ -19,7 +19,6 @@ const compileFirestoreRules = function() {
   let helpersEnabled = false
   try {
     const config = require(`${execPath}/rules/rulez.config.js`)
-    console.log('Config:', config)
     helpersEnabled = config.helpers
   } catch (e) {
     console.info(`ℹ️ No rulez.config.js file found.`)
