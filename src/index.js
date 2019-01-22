@@ -7,7 +7,7 @@ const standardErrorMessage = '❌ Creating firestore.rules failed.'
 const execPath = process.cwd()
 
 const compileFirestoreRules = function() {
-  // Check if Rules folder is created
+  // Check if Rules folder exists
   if (!fs.existsSync(`${execPath}/rules/`)) {
     return console.error(
       standardErrorMessage,
@@ -19,9 +19,10 @@ const compileFirestoreRules = function() {
   let helpersEnabled = false
   try {
     const config = require(`${execPath}/rules/rulez.config.js`)
+    console.log('Config:', config)
     helpersEnabled = config.helpers
   } catch (e) {
-    console.info(`ℹ️ No config file found.`)
+    console.info(`ℹ️ No rulez.config.js file found.`)
   }
 
   // Read all .rules files in the ./rules directory and subdirectories
