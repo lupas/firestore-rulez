@@ -108,3 +108,8 @@ function hasAmtOfWriteFields(size) {
 ### Credits
 
 Thanks to [OneLunch Man](https://stackoverflow.com/users/10747134/onelunch-man) for inspiring me to build this module on Stack Overflow.
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/lupas/firestore-rulez/badge.svg?style=beer-square)](https://beerpay.io/lupas/firestore-rulez)  [![Beerpay](https://beerpay.io/lupas/firestore-rulez/make-wish.svg?style=flat-square)](https://beerpay.io/lupas/firestore-rulez?focus=wish)
