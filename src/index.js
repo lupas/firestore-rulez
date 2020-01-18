@@ -17,11 +17,21 @@ const compileFirestoreRules = function() {
 
   // Get Config
   let helpersEnabled = false
+  let rulesVersion = '1'
   try {
     const config = require(`${execPath}/rules/rulez.config.js`)
     helpersEnabled = config.helpers
+    rulesVersion = config.rules_version ? config.rules_version : rulesVersion
   } catch (e) {
     console.info(`ℹ️ No rulez.config.js file found.`)
+  }
+
+  //Check if rules_version property is correct and its header template exists
+  if (!fs.existsSync(`${__dirname}/templates/header-version-${rulesVersion}.rules`)) {
+    return console.error(
+      standardErrorMessage,
+      `(Reason: Make sure you have given the correct version in rules_version property ('1' or '2') in your rulez.config.js. current value is ${rulesVersion})`
+    )
   }
 
   // Read all .rules files in the ./rules directory and subdirectories
@@ -38,7 +48,7 @@ const compileFirestoreRules = function() {
   }
 
   // Add Header to 1st postion of array
-  filesArray.unshift(`${__dirname}/templates/header.rules`)
+  filesArray.unshift(`${__dirname}/templates/header-version-${rulesVersion}.rules`)
   // Add Footer to lastz position of array
   filesArray.push(`${__dirname}/templates/footer.rules`)
 

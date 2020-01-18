@@ -60,7 +60,8 @@ Firestore-Rulez can be configured by adding a rulez.config.js file to the `./rul
 ```js
 module.exports = {
   // Enables helper functions as specified below
-  helpers: false
+  helpers: false,
+  rules_version: '1'
 }
 ```
 
