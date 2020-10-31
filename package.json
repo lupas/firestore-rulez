@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "concat": "^1.0.3",
-    "glob": "^7.1.6"
+    "glob": "^7.1.6",
+    "yup": "^0.29.3"
   },
   "bin": {
     "firestore-rulez": "./src/index.js"
