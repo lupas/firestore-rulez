@@ -1,4 +1,4 @@
-   // Returns Current Auth User's Uid
+    // Returns Current Auth User's Uid
     function authUserUid() {
       return request.auth.uid
     }
