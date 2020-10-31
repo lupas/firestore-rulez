@@ -1,0 +1,4 @@
+    // Returns wether Current Auth User's Email is verified
+    function authUserEmailIsVerified() {
+      return request.auth.token.email_verified
+    }

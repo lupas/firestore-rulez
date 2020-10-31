@@ -1,0 +1,4 @@
+    // Returns the incoming data
+    function incomingData() {
+      return request.resource.data
+    }

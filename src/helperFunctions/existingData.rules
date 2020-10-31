@@ -1,0 +1,4 @@
+    // Returns the existing data
+    function existingData() {
+      return resource.data
+    }
