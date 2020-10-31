@@ -1,2 +1,4 @@
 node_modules
 rules/*
+rulez.config.js
+firebase.json
