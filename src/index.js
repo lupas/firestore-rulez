@@ -73,9 +73,9 @@ const compileFirestoreRules = async function () {
       `custom helper functions from folder: ${config.custom_helpers_folder}`
   );
   if (config.custom_helpers_folder) {
-    filesArray.unshift(
-      glob.sync(`${execPath}/${config.custom_helpers_folder}/**/*.rules`)
-    );
+    filesArray = glob
+      .sync(`${execPath}/${config.custom_helpers_folder}/**/*.rules`)
+      .concat(filesArray);
   }
 
   // Add Helper Functions to 2nd position of array
@@ -93,7 +93,7 @@ const compileFirestoreRules = async function () {
   );
   // Add Footer to lastz position of array
   filesArray.push(`${__dirname}/templates/footer.rules`);
-
+  logger(filesArray, true, true);
   logger(chalk.blue.bold("Saving ") + `rules to: ${config.rules_output}`, true);
   try {
     concat(filesArray, config.rules_output);
