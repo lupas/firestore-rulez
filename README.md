@@ -21,8 +21,16 @@ Make sure you have Node.js installed on your system (the newer, the better).
 
 1. Install firestore-rulez in the folder where your firestore.rules file needs to be generated:
 
+NPM:
+
 ```bash
 npm i firestore-rulez --save-dev
+```
+
+yarn:
+
+```bash
+yarn add firestore-rulez --dev
 ```
 
 2. Create a subfolder called `/rules`.
@@ -61,8 +69,8 @@ Firestore-Rulez can be configured by adding a rulez.config.js file to the `./rul
 module.exports = {
   // Enables helper functions as specified below
   helpers: false,
-  rules_version: '1'
-}
+  rules_version: "1",
+};
 ```
 
 # Helper Functions
@@ -72,37 +80,37 @@ The following helper functions are present, if the helpers option is enabled:
 ```js
 // Checks if user is authenticated
 function isAuthenticated() {
-  return request.auth != null
+  return request.auth != null;
 }
 
 // Returns Current Auth User's Uid
 function authUserUid() {
-  return request.auth.uid
+  return request.auth.uid;
 }
 
 // Returns Current Auth User's Email
 function authUserEmail() {
-  return request.auth.token.email
+  return request.auth.token.email;
 }
 
 // Returns wether Current Auth User's Email is verified
 function authUserEmailIsVerified() {
-  return request.auth.token.email_verified
+  return request.auth.token.email_verified;
 }
 
 // Returns the existing data
 function existingData() {
-  return resource.data
+  return resource.data;
 }
 
 // Returns the incoming data
 function incomingData() {
-  return request.resource.data
+  return request.resource.data;
 }
 
 // Checks if the request has X write fields
 function hasAmtOfWriteFields(size) {
-  return request.writeFields.size() == size
+  return request.writeFields.size() == size;
 }
 ```
 
