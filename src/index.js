@@ -93,7 +93,6 @@ const compileFirestoreRules = async function () {
   );
   // Add Footer to lastz position of array
   filesArray.push(`${__dirname}/templates/footer.rules`);
-  logger(filesArray, true, true);
   logger(chalk.blue.bold("Saving ") + `rules to: ${config.rules_output}`, true);
   try {
     concat(filesArray, config.rules_output);
