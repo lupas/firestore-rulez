@@ -17,9 +17,7 @@ Give it a go and feel free to add additional helper functions to the repository!
 
 Make sure you have Node.js installed on your system (the newer, the better).
 
-## Setup
-
-1. Install firestore-rulez in the folder where your firestore.rules file needs to be generated:
+## Installation
 
 NPM:
 
@@ -33,9 +31,17 @@ yarn:
 yarn add firestore-rulez --dev
 ```
 
-2. Create a subfolder called `/rules`.
+## Basic Usage
 
-3. Add as many .rules files to the folder as you like.
+1. Create a subfolder called `/rules`.
+
+2. Add as many .rules files to the folder as you like.
+
+3. Generate firestore.rules with
+
+```bash
+firestore-rulez
+```
 
 ## Run
 
