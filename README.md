@@ -85,14 +85,14 @@ Firestore-Rulez can be configured by adding a rulez.config.js file to the `proje
 
 The file is to export a object with the following syntax:
 
-| Field                 | Default Value                                                                                                                           | Type                      | Description                                                                                                                                                                                             |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- | --- | ------------------------------------- |
-| helpers               | `["authUserEmail", "authUserEmailIsVerified", "authUserUid", "existingData", "hasAmtOfWriteFields", "incomingData", "isAuthenticated"]` | array(strings) \| boolean | used to add helper functions to the output, this can be `true` to include all helper functions or `false` to include non of the helper functions or an array of the [function names](#helper-functions) |
-| custom_helpers_folder | `null`                                                                                                                                  | `null` \| string          | path to user defined helper functions                                                                                                                                                                   |
-| rules_version         | `"1"`                                                                                                                                   | `"1"                      | "2"                                                                                                                                                                                                     | 1   | 2`  | which version is the rules written in |
-| rules_folder          | `"rules"`                                                                                                                               | string                    | folder where the rule fragments can be found                                                                                                                                                            |
-| rules_output          | `"firestore.rules"`                                                                                                                     | string                    | name of the file to output to                                                                                                                                                                           |
-| use_firebase_config   | `false`                                                                                                                                 | boolean                   | use the firebase config file `firebase.json` to get the rules output file name and location _(recommeneded to use so if the rules file change in firebase the output will match)_                       |
+| Field | Default Value | Type | Description |
+| ----- | --------------- | ----- | ------------- |
+| helpers | `["authUserEmail", "authUserEmailIsVerified", "authUserUid", "existingData", "hasAmtOfWriteFields", "incomingData", "isAuthenticated"]` | array(strings) \| boolean | used to add helper functions to the output, this can be `true` to include all helper functions or `false` to include non of the helper functions or an array of the [function names](#helper-functions) |
+| custom_helpers_folder | `null` | `null` \| string | path to user defined helper functions |
+| rules_version | `"1"` | `"1"` \| `"2"` \| `1` \| `2` | which version is the rules written in |
+| rules_folder | `"rules"` | string | folder where the rule fragments can be found |
+| rules_output | `"firestore.rules"` | string  | name of the file to output to |
+| use_firebase_config | `false` | boolean | use the firebase config file `firebase.json` to get the rules output file name and location |
 
 ## Default Configuration File
 
