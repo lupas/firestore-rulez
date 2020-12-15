@@ -128,7 +128,7 @@ The following helper functions are present, if the helpers option is enabled or 
 | incomingData | Returns the incoming data |
 | hasAmtOfWriteFields | Checks if the request has X write fields |
 
-Use the name of the functions are used in the rules files and to enable them in the configuration.
+Use the name of the functionin the rules files and in the configuration file to enable them in the configuration or set the helpers function to true to include them all.
 
 ## isAuthenticated
 
