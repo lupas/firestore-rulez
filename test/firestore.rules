@@ -2,6 +2,31 @@ rules_version = '2';
 service cloud.firestore {
 	match /databases/{database}/documents {
 
+ 
+    ////////////////////////////////////////////////////////
+    /////////// Local Functions:
+    ////////////////////////////////////////////////////////
+    function isModeratorOrMores() {
+      return request.auth.token.role == 'moderator' ||
+      request.auth.token.role == 'admin' ||
+      request.auth.token.role == 'superadmin'
+    }
+
+    function isAdminOrMore() {
+      return request.auth.token.role == 'admin' ||
+      request.auth.token.role == 'superadmin'
+    }
+
+    function isSuperadmin() {
+      return request.auth.token.role == 'superadmin'
+    }
+
+    ////////////////////////////////////////////////////////
+    /////////// Getters:
+    ////////////////////////////////////////////////////////
+    function getCurrentUser() {
+    	return get(/databases/$(database)/documents/users/$(authUserEmail())).data
+    }
 
 		////////////////////////////////////////////////////////
     /////////// Allow all for admins:
