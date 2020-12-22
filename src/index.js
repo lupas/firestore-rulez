@@ -68,14 +68,21 @@ const compileFirestoreRules = async function () {
   }
 
   // Add Custom Helper Functions to 2nd position of array
-  logger(
-    chalk.magenta.bold("Adding ") +
-      `custom helper functions from folder: ${config.custom_helpers_folder}`
-  );
   if (config.custom_helpers_folder) {
-    filesArray = glob
+    logger(
+      chalk.magenta.bold("Adding ") +
+        `custom helper functions from folder: ${config.custom_helpers_folder}`
+    );
+    const customHelperFunctions = glob
       .sync(`${execPath}/${config.custom_helpers_folder}/**/*.rules`)
-      .concat(filesArray);
+    if (customHelperFunctions.length) {
+      filesArray = customHelperFunctions.concat(filesArray)
+    } else {
+      logger(
+        chalk.red.bold("Warning ") +
+          `You defined the "custom_helpers_folder" property but we could not find any custom helper functions. Please check if the folder & files exist.`
+      );
+    }
   }
 
   // Add Helper Functions to 2nd position of array
