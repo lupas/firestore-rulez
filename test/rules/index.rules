@@ -1,0 +1,32 @@
+
+		////////////////////////////////////////////////////////
+    /////////// Allow all for admins:
+    ////////////////////////////////////////////////////////
+    match /{document=**} {
+      allow read, write: if isSuperadmin()
+    }
+
+    ////////////////////////////////////////////////////////
+    /////////// Specific Rules:
+    ////////////////////////////////////////////////////////
+    
+    // All User Data
+    match /test/{testId}/users/{uid} {      
+      allow read, write:
+      	if authUserUid() == uid
+        || isModeratorOrMore()
+    }
+
+    match /test/{testId}/users/{uid}/{document=**} {
+    	allow read, write:
+      	if authUserUid() == uid
+        || isModeratorOrMore()
+		}
+
+    // All Exercise Templates
+    match /test/{testId}/testFoo/{testFooId} {
+    	allow read:
+      	if true
+      allow write:
+      	if isAdminOrMore()
+		}

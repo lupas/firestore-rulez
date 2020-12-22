@@ -6,7 +6,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "cd src && node index.js",
-    "publishToNpm": "npm run compile && npm publish"
+    "publishToNpm": "npm publish",
+    "test": "cd test && node ../src/index.js"
   },
   "author": "Pascal Luther",
   "repository": "https://github.com/lupas/firestore-rulez",
