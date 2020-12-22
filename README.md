@@ -195,4 +195,4 @@ function hasAmtOfWriteFields(size) {
 
 # Credits
 
-Thanks to [OneLunch Man](https://stackoverflow.com/users/10747134/onelunch-man) for inspiring me to build this module on Stack Overflow.
+Thanks to [OneLunch Man](https://stackoverflow.com/users/10747134/onelunch-man) for inspiring me to build this module on Stack Overflow and to [Bullfrog1234](https://github.com/Bullfrog1234) for the amazing pull-request [#5](https://github.com/lupas/firestore-rulez/pull/5) making this module rule(z) even more!
