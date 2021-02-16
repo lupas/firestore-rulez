@@ -1,5 +1,5 @@
 
-		////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////
     /////////// Allow all for admins:
     ////////////////////////////////////////////////////////
     match /{document=**} {
@@ -21,7 +21,7 @@
     	allow read, write:
       	if authUserUid() == uid
         || isModeratorOrMore()
-		}
+	}
 
     // All Exercise Templates
     match /test/{testId}/testFoo/{testFooId} {
@@ -29,4 +29,4 @@
       	if true
       allow write:
       	if isAdminOrMore()
-		}
+	}

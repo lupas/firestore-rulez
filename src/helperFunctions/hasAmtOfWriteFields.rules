@@ -1,4 +1,4 @@
     // Checks if the request has X write fields
     function hasAmtOfWriteFields(size){
-    	return request.writeFields.size() == size
+    	return request.writeFields.size() == size;
     }

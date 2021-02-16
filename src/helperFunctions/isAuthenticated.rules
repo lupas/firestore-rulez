@@ -1,4 +1,4 @@
     // Checks if user is authenticated
     function isAuthenticated() {
-      return request.auth != null
+      return request.auth != null;
     }
