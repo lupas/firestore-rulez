@@ -1,4 +1,4 @@
     // Returns Current Auth User's Email
     function authUserEmail() {
-      return request.auth.token.email
+      return request.auth.token.email;
     }
