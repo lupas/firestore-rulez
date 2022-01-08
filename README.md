@@ -123,7 +123,7 @@ The following helper functions are present, if the helpers option is enabled or 
 | isAuthenticated | Checks if user is authenticated |
 | authUserUid | Returns Current Auth User's Uid |
 | authUserEmail | Returns Current Auth User's Email |
-| authUserEmailIsVerified | Returns wether Current Auth User's Email is verified |
+| authUserEmailIsVerified | Returns whether Current Auth User's Email is verified |
 | existingData | Returns the existing data |
 | incomingData | Returns the incoming data |
 | hasAmtOfWriteFields | Checks if the request has X write fields |
@@ -160,7 +160,7 @@ function authUserEmail() {
 ## authUserEmailIsVerified
 
 ```js
-// Returns wether Current Auth User's Email is verified
+// Returns whether Current Auth User's Email is verified
 function authUserEmailIsVerified() {
   return request.auth.token.email_verified;
 }
